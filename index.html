@@ -2,69 +2,36 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Информация о космосе</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #000;
-            color: #fff;
-        }
-        header {
-            text-align: center;
-            padding: 50px;
-            background-color: #1a1a1a;
-        }
-        section {
-            margin: 20px 0;
-        }
-        h2 {
-            color: #ffcc00;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #1a1a1a;
-        }
-    </style>
+    <title>Планеты Млечного Пути</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="galaxy-container">
+        <header>
+            <h1>Планеты Солнечной системы</h1>
+        </header>
 
-<header>
-    <h1>Исследование космоса</h1>
-    <p>Добро пожаловать на наш сайт, посвященный космосу и его тайнам!</p>
-</header>
+        <nav>
+            <button onclick="showPlanet('mercury')">Меркурий</button>
+            <button onclick="showPlanet('venus')">Венера</button>
+            <button onclick="showPlanet('earth')">Земля</button>
+            <button onclick="showPlanet('mars')">Марс</button>
+            <button onclick="showPlanet('jupiter')">Юпитер</button>
+            <button onclick="showPlanet('saturn')">Сатурн</button>
+            <button onclick="showPlanet('uranus')">Уран</button>
+            <button onclick="showPlanet('neptune')">Нептун</button>
+        </nav>
 
-<section>
-    <h2>Что такое космос?</h2>
-    <p>Космос — это безграничное пространство, содержащее все существующее, включая планеты, звезды и галактики.</p>
-</section>
+        <main id="planet-info">
+            <div id="planet-details" class="hidden">
+                <h2 id="planet-name"></h2>
+                <img id="planet-image" src="" alt="Планета">
+                <p id="planet-description"></p>
+            </div>
+        </main>
+    </div>
 
-<section>
-    <h2>Планеты нашей солнечной системы</h2>
-    <ul>
-        <li>Меркурий</li>
-        <li>Венера</li>
-        <li>Земля</li>
-        <li>Марс</li>
-        <li>Юпитер</li>
-        <li>Сатурн</li>
-        <li>Уран</li>
-        <li>Нептун</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Важность исследования космоса</h2>
-    <p>Исследование космоса помогает нам лучше понять вселенную и может привести к новым открытиям, которые помогут улучшить нашу жизнь на Земле.</p>
-</section>
-
-<footer>
-    <p>&copy; 2023 Исследование космоса. Все права защищены.</p>
-</footer>
-
+    <canvas id="space-background"></canvas>
+    <script src="script.js"></script>
 </body>
 </html>

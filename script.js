@@ -7,7 +7,6 @@ const planetData = {
         distance: "57.9 млн км",
         year: "88 дней"
     },
-    // Добавьте данные для остальных планет
 };
 
 function createStarfield() {

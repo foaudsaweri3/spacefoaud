@@ -8,7 +8,7 @@ const planets = {
     venus: {
         name: 'Венера',
         description: 'Вторая планета от Солнца, похожа по размеру на Землю.',
-        image: 'https://example.com/venus.jpg'
+        image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHHDT3Vk1Eax2YJVLhaTy4fZsW0jX9STxoRWp_t4pQg7mLDXzieOf5GAjS6kcSfVp_i6u2rLxql95H0MFLtLRnaIT7dJN4d66CJeQQ5xUAQhl6IL62Chc2Fau9gnWO4J48BlrMlfwYaorHDzg_5fxmPpqI5VKuYtTo0t0TtjoL1rM5KXtj0dhFvl9Fwh6W/s320/pngwing.com.png'
     },
     // Добавьте данные для остальных планет
 };

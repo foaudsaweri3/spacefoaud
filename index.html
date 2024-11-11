@@ -1,37 +1,108 @@
+html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Планеты Млечного Пути</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #000;
+            color: #fff;
+        }
+        header {
+            text-align: center;
+            padding: 50px;
+            background-color: #1a1a1a;
+        }
+        section {
+            margin: 20px 0;
+        }
+        h2 {
+            color: #ffcc00;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #1a1a1a;
+        }
+        .planet {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+        }
+        .planet img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <div class="galaxy-container">
-        <header>
-            <h1>Планеты Солнечной системы</h1>
-        </header>
 
-        <nav>
-            <button onclick="showPlanet('mercury')">Меркурий</button>
-            <button onclick="showPlanet('venus')">Венера</button>
-            <button onclick="showPlanet('earth')">Земля</button>
-            <button onclick="showPlanet('mars')">Марс</button>
-            <button onclick="showPlanet('jupiter')">Юпитер</button>
-            <button onclick="showPlanet('saturn')">Сатурн</button>
-            <button onclick="showPlanet('uranus')">Уран</button>
-            <button onclick="showPlanet('neptune')">Нептун</button>
-        </nav>
+<header>
+    <h1>Планеты Млечного Пути</h1>
+    <p>Добро пожаловать на наш сайт, посвященный планетам нашей галактики!</p>
+</header>
 
-        <main id="planet-info">
-            <div id="planet-details" class="hidden">
-                <h2 id="planet-name"></h2>
-                <img id="planet-image" src="" alt="Планета">
-                <p id="planet-description"></p>
-            </div>
-        </main>
-    </div>
+<main>
+    <section class="planet">
+        <h2>Меркурий</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Mercury_in_color.jpg" alt="Меркурий">
+        <p>Меркурий — ближайшая к Солнцу планета. Он имеет очень тонкую атмосферу и высокие температуры.</p>
+    </section>
 
-    <canvas id="space-background"></canvas>
-    <script src="script.js"></script>
+    <section class="planet">
+        <h2>Венера</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus_%28planet%29.jpg" alt="Венера">
+        <p>Венера — вторая планета от Солнца, известная своим ярким светом и плотной атмосферой.</p>
+    </section>
+
+    <section class="planet">
+        <h2>Земля</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Earth_from_space.jpg" alt="Земля">
+        <p>Земля — третья планета от Солнца и единственное известное место, где существует жизнь.</p>
+    </section>
+
+    <section class="planet">
+        <h2>Марс</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Mars_rock.jpg" alt="Марс">
+        <p>Марс — четвертая планета от Солнца, известная своим красным цветом и возможностью наличия воды.</p>
+    </section>
+
+    <section class="planet">
+        <h2>Юпитер</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg" alt="Юпитер">
+        <p>Юпитер — самая большая планета в Солнечной системе, известная своими большими штормами.</p>
+    </section>
+
+    <section class="planet">
+        <h2>Сатурн</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Saturn_%28planet%29.jpg" alt="Сатурн">
+        <p>Сатурн — известен своими кольцами и является шестой планетой от Солнца.</p>
+    </section>
+
+    <section class="planet">
+        <h2>Уран</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Urano.jpg" alt="Уран">
+        <p>Уран — седьмая планета от Солнца, известная своим необычным наклоном оси вращения.</p>
+    </section>
+
+    <section class="planet">
+        <h2>Нептун</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Neptune.jpg" alt="Нептун">
+        <p>Нептун — восьмая планета от Солнца, известная своими сильными ветрами и темно-синим цветом.</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2023 Планеты Млечного Пути. Все права защищены.</p>
+</footer>
+
 </body>
 </html>

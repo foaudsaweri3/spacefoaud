@@ -3,48 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تصميم الفضاء</title>
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            background-color: black;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .star {
-            position: absolute;
-            border-radius: 50%;
-            background-color: white;
-            animation: twinkle 1.5s infinite alternate;
-        }
-
-        @keyframes twinkle {
-            0% {
-                opacity: 0.5;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-    </style>
+    <title>موقع القضاء</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script>
-        const numStars = 100; // عدد النجوم
-        const body = document.body;
+    <header>
+        <h1>موقع القضاء</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">حول القضاء</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        for (let i = 0; i < numStars; i++) {
-            const star = document.createElement('div');
-            star.classList.add('star');
-            const size = Math.random() * 3 + 1; // حجم النجمة
-            star.style.width = `${size}px`;
-            star.style.height = `${size}px`;
-            star.style.top = `${Math.random() * 100}vh`;
-            star.style.left = `${Math.random() * 100}vw`;
-            body.appendChild(star);
-        }
-    </script>
+    <main>
+        <section id="about">
+            <h2>حول القضاء</h2>
+            <p>القضاء هو السلطة التي تتولى تطبيق القوانين والعدالة في المجتمع.</p>
+        </section>
+
+        <section id="services">
+            <h2>خدماتنا</h2>
+            <ul>
+                <li>الاستشارات القانونية</li>
+                <li>تمثيل قانوني في المحاكم</li>
+                <li>تسوية المنازعات</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>اتصل بنا</h2>
+            <form id="contact-form">
+                <label for="name">الاسم:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" required>
+
+                <label for="message">رسالتك:</label>
+                <textarea id="message" required></textarea>
+
+                <button type="submit">إرسال</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 موقع القضاء. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

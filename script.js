@@ -3,7 +3,7 @@ const planets = {
     mercury: {
         name: 'Меркурий',
         description: 'Ближайшая к Солнцу планета, небольшая и каменистая.',
-        image: 'https://e7.pngegg.com/pngimages/957/238/png-clipart-mercury-planet-planet-miscellaneous-sphere-thumbnail.png'
+        image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvHduBtGdyAKvhjK4gopwQ_0fRTk03iAd_QFj_W4DYXIkK2nhN9JjGbuXIrqe5cpAYj3AdJlBsI3QxQo8_X2Mn_KA3L2iixL-XZJdNV3nHYd1Qds7iWNKlh7aHtTrf92l3gh5ZxtLuPlSCpMLnPmRk2N_lvy_EgHZXm6-9Xd3MD5stwcpd-mV7ScXtYw8I/s320/%E2%80%94Pngtree%E2%80%94mercury%20planet_8364672.png'
     },
     venus: {
         name: 'Венера',

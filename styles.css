@@ -1,59 +1,43 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع القضاء</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>موقع القضاء</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">حول القضاء</a></li>
-                <li><a href="#services">خدماتنا</a></li>
-                <li><a href="#contact">اتصل بنا</a></li>
-            </ul>
-        </nav>
-    </header>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: rtl; /* لجعل النص يظهر من اليمين إلى اليسار */
+}
 
-    <main>
-        <section id="about">
-            <h2>حول القضاء</h2>
-            <p>القضاء هو السلطة التي تتولى تطبيق القوانين والعدالة في المجتمع.</p>
-        </section>
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
 
-        <section id="services">
-            <h2>خدماتنا</h2>
-            <ul>
-                <li>الاستشارات القانونية</li>
-                <li>تمثيل قانوني في المحاكم</li>
-                <li>تسوية المنازعات</li>
-            </ul>
-        </section>
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-        <section id="contact">
-            <h2>اتصل بنا</h2>
-            <form id="contact-form">
-                <label for="name">الاسم:</label>
-                <input type="text" id="name" required>
-                
-                <label for="email">البريد الإلكتروني:</label>
-                <input type="email" id="email" required>
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
 
-                <label for="message">رسالتك:</label>
-                <textarea id="message" required></textarea>
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
 
-                <button type="submit">إرسال</button>
-            </form>
-        </section>
-    </main>
+main {
+    padding: 20px;
+}
 
-    <footer>
-        <p>&copy; 2023 موقع القضاء. جميع الحقوق محفوظة.</p>
-    </footer>
+section {
+    margin: 20px 0;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+}

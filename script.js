@@ -2,13 +2,13 @@
 const planets = {
     mercury: {
         name: 'Меркурий',
-        description: 'Меркурий - раскаленная, изрытая кратерами скалистая планета, ближайшая к Солнцу, с экстремальными температурами от -180°C до +430°C.',
-        image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvHduBtGdyAKvhjK4gopwQ_0fRTk03iAd_QFj_W4DYXIkK2nhN9JjGbuXIrqe5cpAYj3AdJlBsI3QxQo8_X2Mn_KA3L2iixL-XZJdNV3nHYd1Qds7iWNKlh7aHtTrf92l3gh5ZxtLuPlSCpMLnPmRk2N_lvy_EgHZXm6-9Xd3MD5stwcpd-mV7ScXtYw8I/s320/%E2%80%94Pngtree%E2%80%94mercury%20planet_8364672.png'
+        description: 'Ближайшая к Солнцу планета, небольшая и каменистая.',
+        image: 'https://example.com/mercury.jpg'
     },
     venus: {
         name: 'Венера',
-        description: 'Венера - раскаленная, покрытая густой атмосферой планета, вторая от Солнца, с экстремальными температурами и уникальной геологией, которая делает ее одним из самых интересных объектов в Солнечной системе.',
-        image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHHDT3Vk1Eax2YJVLhaTy4fZsW0jX9STxoRWp_t4pQg7mLDXzieOf5GAjS6kcSfVp_i6u2rLxql95H0MFLtLRnaIT7dJN4d66CJeQQ5xUAQhl6IL62Chc2Fau9gnWO4J48BlrMlfwYaorHDzg_5fxmPpqI5VKuYtTo0t0TtjoL1rM5KXtj0dhFvl9Fwh6W/s320/pngwing.com.png'
+        description: 'Вторая планета от Солнца, похожа по размеру на Землю.',
+        image: 'https://example.com/venus.jpg'
     },
     // Добавьте данные для остальных планет
 };

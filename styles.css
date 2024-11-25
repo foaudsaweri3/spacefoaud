@@ -1,75 +1,133 @@
-/* إعدادات الخطوط العامة */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Cairo', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>مملكة الحيوانات</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+    <!-- مكتبة AOS للرسوم المتحركة -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
 
-body {
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
+    <!-- قائمة التنقل الرئيسية -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>مملكة الحيوانات</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">حول</a></li>
+                <li><a href="#animals">الحيوانات</a></li>
+                <li><a href="#blog">المدونة</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
 
-/* قائمة التنقل */
-header {
-    background-color: #2c3e50;
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
+    <!-- قسم المقدمة -->
+    <section id="home" class="hero-section" data-aos="fade-in">
+        <div class="hero-content">
+            <h1>اكتشف عالم الحيوانات البرية</h1>
+            <p>استكشف أروع الحيوانات من جميع أنحاء العالم.</p>
+            <a href="#animals" class="btn">استكشاف الحيوانات</a>
+        </div>
+    </section>
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+    <!-- قسم حول الموقع -->
+    <section id="about" class="about-section">
+        <div class="container" data-aos="fade-up">
+            <h2>من نحن؟</h2>
+            <p>
+                نحن موقع متخصص في تقديم معلومات شيقة وتفصيلية عن الحيوانات البرية، نهدف لتثقيف الزوار وتقديم تجربة مميزة لعشاق الطبيعة والحيوانات.
+            </p>
+        </div>
+    </section>
 
-.logo h1 {
-    color: #fff;
-    font-size: 24px;
-}
+    <!-- قسم الحيوانات -->
+    <section id="animals" class="animal-section">
+        <h2>الحيوانات المميزة</h2>
+        <div class="animal-gallery" data-aos="fade-up">
+            <div class="animal-card">
+                <img src="lion.jpg" alt="الأسد">
+                <h3>الأسد</h3>
+                <p>الأسد هو أحد أكبر القطط البرية، ويُعرف بلقب "ملك الغابة".</p>
+            </div>
+            <div class="animal-card">
+                <img src="elephant.jpg" alt="الفيل">
+                <h3>الفيل</h3>
+                <p>الفيل هو أكبر الثدييات البرية، ويتميز بذاكرته القوية وحبه للأسرة.</p>
+            </div>
+            <div class="animal-card">
+                <img src="tiger.jpg" alt="النمر">
+                <h3>النمر</h3>
+                <p>النمر هو قط بري يعيش في الغابات الكثيفة، ويشتهر بقوته وسرعته.</p>
+            </div>
+            <div class="animal-card">
+                <img src="giraffe.jpg" alt="الزرافة">
+                <h3>الزرافة</h3>
+                <p>الزرافة هي أطول الثدييات على وجه الأرض، وتعيش في السهول الأفريقية.</p>
+            </div>
+        </div>
+    </section>
 
-nav ul {
-    list-style: none;
-    display: flex;
-}
+    <!-- قسم المدونة -->
+    <section id="blog" class="blog-section">
+        <h2>أحدث المقالات</h2>
+        <div class="blog-posts" data-aos="fade-up">
+            <div class="post-card">
+                <h3>أهمية الحفاظ على البيئة الطبيعية للحيوانات</h3>
+                <p>تعرف على أهمية الحفاظ على البيئات الطبيعية للحيوانات البرية لضمان استمرار الحياة البرية.</p>
+                <a href="#">اقرأ المزيد</a>
+            </div>
+            <div class="post-card">
+                <h3>10 حقائق مذهلة عن الأسود</h3>
+                <p>اكتشف بعض الحقائق المذهلة عن الأسود والتي قد تكون لم تعرفها من قبل!</p>
+                <a href="#">اقرأ المزيد</a>
+            </div>
+            <div class="post-card">
+                <h3>كيف تحافظ الحيوانات البرية على توازن البيئة؟</h3>
+                <p>تعرف على الدور الذي تلعبه الحيوانات في الحفاظ على التوازن البيئي في البرية.</p>
+                <a href="#">اقرأ المزيد</a>
+            </div>
+        </div>
+    </section>
 
-nav ul li {
-    margin: 0 15px;
-}
+    <!-- قسم اتصل بنا -->
+    <section id="contact" class="contact-section">
+        <div class="container" data-aos="fade-up">
+            <h2>اتصل بنا</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">الاسم</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">رسالتك</label>
+                    <textarea id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">إرسال</button>
+            </form>
+        </div>
+    </section>
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
+    <footer>
+        <p>&copy; 2024 مملكة الحيوانات. جميع الحقوق محفوظة.</p>
+    </footer>
 
-nav ul li a:hover {
-    color: #1abc9c;
-}
-
-/* قسم المقدمة */
-.hero-section {
-    background: url('hero-background.jpg') no-repeat center center/cover;
-    height: 100vh;
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.hero-content {
-    max-width: 600px;
-}
-
-.hero-content h1 {
+    <!-- مكتبة AOS للرسوم المتحركة -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+</body>
+</html>

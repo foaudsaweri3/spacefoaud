@@ -2,6 +2,7 @@ body {
  font-family: 'Open Sans', sans-serif;
  margin: 0;
  padding: 0;
+ background-color: #f7f7f7;
 }
 
 header {
@@ -26,6 +27,11 @@ header nav ul li {
 header nav a {
  color: #fff;
  text-decoration: none;
+ transition: color 0.2s ease-in-out;
+}
+
+header nav a:hover {
+ color: #ccc;
 }
 
 main {
@@ -36,14 +42,16 @@ main {
 }
 
 section {
- background-color: #f7f7f7;
+ background-color: #fff;
  padding: 1em;
  margin-bottom: 1em;
  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ border-radius: 10px;
 }
 
 h2 {
  color: #333;
+ margin-top: 0;
 }
 
 p {
@@ -73,4 +81,22 @@ footer {
  padding: 1em;
  text-align: center;
  clear: both;
+}
+
+footer p {
+ margin-bottom: 10px;
+}
+
+/* إضافة تأثيرات حركية إلى الموقع */
+section:hover {
+ transform: translateY(-10px);
+ box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+section:hover h2 {
+ color: #337ab7;
+}
+
+section:hover p {
+ color: #337ab7;
 }

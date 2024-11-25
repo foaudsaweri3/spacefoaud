@@ -1,0 +1,10 @@
+// Добавляем событие клика на заголовки, чтобы разворачивать и сворачивать секции
+document.addEventListener('DOMContentLoaded', function() {
+ const headings = document.querySelectorAll('h2');
+ headings.forEach(function(heading) {
+ heading.addEventListener('click', function() {
+ const section = heading.parentNode;
+ section.classList.toggle('expanded');
+ });
+ });
+});

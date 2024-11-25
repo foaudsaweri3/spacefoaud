@@ -1,294 +1,75 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Космическая энциклопедия</title>
-    <style>
-        :root {
-            --primary-color: #1a1a2e;
-            --secondary-color: #16213e;
-            --accent-color: #0f3460;
-            --text-color: #e94560;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Orbitron', sans-serif;
-            background-color: var(--primary-color);
-            color: white;
-            overflow-x: hidden;
-        }
-
-        .galaxy-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background-color: rgba(26, 26, 46, 0.8);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: var(--text-color);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: white;
-        }
-
-        #planet-details {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.8);
-            z-index: 1000;
-        }
-
-        .planet-info {
-            display: flex;
-            background-color: var(--secondary-color);
-            padding: 40px;
-            border-radius: 15px;
-            max-width: 900px;
-        }
-
-        .planet-image img {
-            max-width: 400px;
-            border-radius: 10px;
-        }
-
-        .planet-description {
-            margin-left: 30px;
-        }
-
-        .hidden {
-            display: none !important;
-        }
-    </style>
+    <title>Animal Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="galaxy-background">
-        <canvas id="starfield"></canvas>
-    </div>
-
     <header>
-        <div class="logo">
-            <h1>Космическая энциклопедия</h1>
-            <p>Исследуй вселенную вместе с нами</p>
-        </div>
         <nav>
             <ul>
-                <li><a href="#" data-planet="mercury">Меркурий</a></li>
-                <li><a href="#" data-planet="venus">Венера</a></li>
-                <li><a href="#" data-planet="earth">Земля</a></li>
-                <li><a href="#" data-planet="mars">Марс</a></li>
-                <li><a href="#" data-planet="jupiter">Юпитер</a></li>
-                <li><a href="#" data-planet="saturn">Сатурн</a></li>
-                <li><a href="#" data-planet="uranus">Уран</a></li>
-                <li><a href="#" data-planet="neptune">Нептун</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#animals">Animals</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="planet-details" class="hidden">
-        <div class="planet-info">
-            <div class="planet-image">
-                <img id="planet-img" src="" alt="Планета">
+    <main>
+        <section id="home">
+            <h1>Welcome to the Animal Kingdom</h1>
+            <p>Discover the fascinating world of animals!</p>
+        </section>
+
+        <section id="animals">
+            <h2>Featured Animals</h2>
+            <div class="animal">
+                <img src="lion.jpg" alt="Lion">
+                <h3>Lion</h3>
+                <p>The lion is a majestic big cat known for its powerful roar and impressive mane.</p>
             </div>
-            <div class="planet-description">
-                <h2 id="planet-name"></h2>
-                <p id="planet-text"></p>
-                <div class="planet-facts">
-                    <div class="fact">
-                        <span>Диаметр:</span>
-                        <span id="planet-diameter"></span>
-                    </div>
-                    <div class="fact">
-                        <span>Расстояние от Солнца:</span>
-                        <span id="planet-distance"></span>
-                    </div>
-                    <div class="fact">
-                        <span>Продолжительность года:</span>
-                        <span id="planet-year"></span>
-                    </div>
-                </div>
+            <div class="animal">
+                <img src="elephant.jpg" alt="Elephant">
+                <h3>Elephant</h3>
+                <p>Elephants are the largest land mammals and are known for their intelligence and strong social bonds.</p>
             </div>
-        </div>
-        <button id="close-details">Закрыть</button>
+            <!-- Add more animal sections as needed -->
+        </section>
+
+        <section id="gallery">
+            <h2>Animal Gallery</h2>
+            <div class="gallery-grid">
+                <img src="animal1.jpg" alt="Animal 1">
+                <img src="animal2.jpg" alt="Animal 2">
+                <img src="animal3.jpg" alt="Animal 3">
+                <!-- Add more animal images -->
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Космическая энциклопедия</p>
+        <p>&copy; 2023 Animal Website. All rights reserved.</p>
     </footer>
 
-    <script>
-        const planetData = {
-            mercury: {
-                name: "Меркурий",
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Mercury_in_color_-_Prockter07_centered.jpg/640px-Mercury_in_color_-_Prockter07_centered.jpg",
-                description: "Ближайшая к Солнцу планета...",
-                diameter: "4,879 км",
-                distance: "57.9 млн км",
-                year: "88 дней"
-            },
-            venus: {
-                name: "Венера",
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Venus_globe.jpg/900px-Venus_globe.jpg?20190107164518",
-                description: "Вторая планета от Солнца...",
-                diameter: "12,104 км",
-                distance: "108.2 млн км",
-                year: "225 дней"
-            },
-            earth: {
-                name: "Земля",
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/North_America_from_low_orbiting_satellite_Suomi_NPP.jpg/640px-North_America_from_low_orbiting_satellite_Suomi_NPP.jpg",
-                description: "Третья планета от Солнца...",
-                diameter: "12,742 км",
-                distance: "149.6 млн км",
-                year: "365 дней"
-            },
-            mars: {
-                name: "Марс",
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Schiaparelli_Hemisphere_Enhanced.jpg/640px-Schiaparelli_Hemisphere_Enhanced.jpg",
-                description: "Четвертая планета от Солнца...",
-                diameter: "6,794 км",
-                distance: "227.9 млн км",
-                year: "687 дней"
-            },
-            jupiter: {
-                name: "Юпитер",
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/PIA22946-Jupiter-RedSpot-JunoSpacecraft-20190212.jpg/640px-PIA22946-Jupiter-RedSpot-JunoSpacecraft-20190212.jpg",
-                description: "Самая большая планета в Солнечной системе...",
-                diameter: "142,984 км",
-                distance: "778.3 млн км",
-                year: "11.86 лет"
-            },
-            saturn: {
-                name: "Сатурн",
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/640px-Saturn_during_Equinox.jpg",
-                description: "Шестая планета от Солнца...",
-                diameter: "116,460 км",
-                distance: "1.43 млрд км",
-                year: "29.5 лет"
-            },
-            uranus: {
-                name: "Уран",
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Uranus_Hubble.jpg/640px-Uranus_Hubble.jpg",
-                description: "Седьмая планета от Солнца...",
-                diameter: "51,118 км",
-                distance: "2.88 млрд км",
-                year: "84.01 года"
-            },
-            neptune: {
-                name: "Нептун",
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Neptune_Full.jpg/640px-Neptune_Full.jpg",
-                description: "Восьмая планета от Солнца...",
-                diameter: "49,528 км",
-                distance: "4.46 млрд км",
-                year: "164.8 года"
-            }
-        };
-
-        function createStarfield() {
-            const canvas = document.getElementById('starfield');
-            const ctx = canvas.getContext('2d');
-            
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-
-            const stars = [];
-            for (let i = 0; i < 200; i++) {
-                stars.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    radius: Math.random() * 2,
-                    speed: Math.random() * 0.5
-                });
-            }
-
-            function animate() {
-                ctx.fillStyle = 'black';
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-                ctx.fillStyle = 'white';
-                stars.forEach(star => {
-                    ctx.beginPath();
-                    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-                    ctx.fill();
-                    
-                    star.x -= star.speed;
-                    if (star.x < 0) star.x = canvas.width;
-                });
-
-                requestAnimationFrame(animate);
-            }
-
-            animate();
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            createStarfield();
-
-            const navLinks = document.querySelectorAll('nav ul li a');
-            const planetDetails = document.getElementById('planet-details');
-            const closeButton = document.getElementById('close-details');
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const planetName = link.dataset.planet;
-                    showPlanetDetails(planetName);
-                });
-            });
-
-            closeButton.addEventListener('click', () => {
-                planetDetails.classList.add('hidden');
-            });
-        });
-
-        function showPlanetDetails(planetName) {
-            const planet = planetData[planetName];
-            
-            document.getElementById('planet-name').textContent = planet.name;
-            document.getElementById('planet-img').src = planet.image;
-            document.getElementById('planet-text').textContent = planet.description;
-            document.getElementById('planet-diameter').textContent = planet.diameter;
-            document.getElementById('planet-distance').textContent = planet.distance;
-            document.getElementById('planet-year').textContent = planet.year;
-
-            const planetDetails = document.getElementById('planet-details');
-            planetDetails.classList.remove('hidden');
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

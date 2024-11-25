@@ -1,182 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wildlife Wonders</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>مملكة الحيوانات</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+    <!-- مكتبة AOS للرسوم المتحركة -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
+
+    <!-- قائمة التنقل -->
     <header>
-        <nav>
+        <nav class="navbar">
             <div class="logo">
-                <img src="logo.png" alt="Wildlife Wonders Logo">
+                <h1>مملكة الحيوانات</h1>
             </div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#animals">Animals</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#facts">Facts</a></li>
-                <li><a href="#quiz">Quiz</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#animals">الحيوانات</a></li>
+                <li><a href="#blog">المدونة</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="home">
-            <div class="hero">
-                <h1>Welcome to Wildlife Wonders</h1>
-                <p>Embark on a journey through the incredible world of animals!</p>
-                <a href="#animals" class="btn">Discover Animals</a>
-            </div>
-        </section>
+    <!-- قسم المقدمة -->
+    <section id="home" class="hero-section">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>اكتشف عالم الحيوانات</h1>
+            <p>استكشف أروع الحيوانات من جميع أنحاء العالم.</p>
+            <a href="#animals" class="btn">استكشاف الحيوانات</a>
+        </div>
+    </section>
 
-        <section id="animals">
-            <h2>Featured Animals</h2>
-            <div class="animal-grid">
-                <div class="animal">
-                    <img src="lion.jpg" alt="Lion">
-                    <div class="animal-info">
-                        <h3>Lion</h3>
-                        <p>The lion is a majestic big cat known for its powerful roar and impressive mane.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
-                </div>
-                <div class="animal">
-                    <img src="elephant.jpg" alt="Elephant">
-                    <div class="animal-info">
-                        <h3>Elephant</h3>
-                        <p>Elephants are the largest land mammals and are known for their intelligence and strong social bonds.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
-                </div>
-                <div class="animal">
-                    <img src="gorilla.jpg" alt="Gorilla">
-                    <div class="animal-info">
-                        <h3>Gorilla</h3>
-                        <p>Gorillas are powerful primates that live in families led by a dominant male silverback.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
-                </div>
-                <div class="animal">
-                    <img src="penguin.jpg" alt="Penguin">
-                    <div class="animal-info">
-                        <h3>Penguin</h3>
-                        <p>Penguins are flightless birds adapted to life in the water, found in the Southern Hemisphere.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
-                </div>
+    <!-- قسم الحيوانات -->
+    <section id="animals" class="animal-section">
+        <h2>الحيوانات المميزة</h2>
+        <div class="animal-gallery" data-aos="fade-up">
+            <div class="animal-card" onclick="showAnimalInfo('lion')">
+                <img src="lion.jpg" alt="الأسد">
+                <h3>الأسد</h3>
+                <p>الأسد هو أحد أكبر القطط البرية، ويُعرف بلقب "ملك الغابة".</p>
             </div>
-        </section>
-
-        <section id="gallery">
-            <h2>Wildlife Gallery</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="animal1.jpg" alt="Animal 1">
-                    <div class="gallery-overlay">
-                        <h3>Majestic Giraffe</h3>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="animal2.jpg" alt="Animal 2">
-                    <div class="gallery-overlay">
-                        <h3>Playful Dolphins</h3>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="animal3.jpg" alt="Animal 3">
-                    <div class="gallery-overlay">
-                        <h3>Colorful Parrot</h3>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="animal4.jpg" alt="Animal 4">
-                    <div class="gallery-overlay">
-                        <h3>Fierce Tiger</h3>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="animal5.jpg" alt="Animal 5">
-                    <div class="gallery-overlay">
-                        <h3>Graceful Swan</h3>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="animal6.jpg" alt="Animal 6">
-                    <div class="gallery-overlay">
-                        <h3>Curious Meerkat</h3>
-                    </div>
-                </div>
+            <div class="animal-card" onclick="showAnimalInfo('elephant')">
+                <img src="elephant.jpg" alt="الفيل">
+                <h3>الفيل</h3>
+                <p>الفيل هو أكبر الثدييات البرية، ويتميز بذاكرته القوية وحبه للأسرة.</p>
             </div>
-        </section>
-
-        <section id="facts">
-            <h2>Fascinating Animal Facts</h2>
-            <div class="fact-container">
-                <div class="fact">
-                    <i class="fas fa-paw"></i>
-                    <p>There are over 1.5 million known animal species on Earth.</p>
-                </div>
-                <div class="fact">
-                    <i class="fas fa-feather"></i>
-                    <p>Birds are the only animals with feathers.</p>
-                </div>
-                <div class="fact">
-                    <i class="fas fa-fish"></i>
-                    <p>Fish have been on Earth for more than 450 million years.</p>
-                </div>
-                <div class="fact">
-                    <i class="fas fa-frog"></i>
-                    <p>Some frogs can jump over 20 times their body length.</p>
-                </div>
-                <div class="fact">
-                    <i class="fas fa-elephant"></i>
-                    <p>African elephants are the largest land animals on Earth.</p>
-                </div>
-                <div class="fact">
-                    <i class="fas fa-dove"></i>
-                    <p>Hummingbirds are the only birds that can fly backwards.</p>
-                </div>
+            <div class="animal-card" onclick="showAnimalInfo('tiger')">
+                <img src="tiger.jpg" alt="النمر">
+                <h3>النمر</h3>
+                <p>النمر هو قط بري يعيش في الغابات الكثيفة، ويشتهر بقوته وسرعته.</p>
             </div>
-        </section>
+            <div class="animal-card" onclick="showAnimalInfo('giraffe')">
+                <img src="giraffe.jpg" alt="الزرافة">
+                <h3>الزرافة</h3>
+                <p>الزرافة هي أطول الثدييات على وجه الأرض، وتعيش في السهول الأفريقية.</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="quiz">
-            <h2>Animal Quiz</h2>
-            <div class="quiz-container">
-                <h3>Test your animal knowledge!</h3>
-                <form id="quiz-form">
-                    <div class="question">
-                        <p>1. Which is the largest land mammal?</p>
-                        <label>
-                            <input type="radio" name="q1" value="a">
-                            a) African Elephant
-                        </label>
-                        <label>
-                            <input type="radio" name="q1" value="b">
-                            b) Blue Whale
-                        </label>
-                        <label>
-                            <input type="radio" name="q1" value="c">
-                            c) Giraffe
-                        </label>
-                    </div>
-                    <div class="question">
-                        <p>2. Which bird is known for its ability to mimic human speech?</p>
-                        <label>
-                            <input type="radio" name="q2" value="a">
-                            a) Parrot
-                        </label>
-                        <label>
-                            <input type="radio" name="q2" value="b">
-                            b) Penguin
-                        </label>
-                        <label>
-                            <input type="radio" name="q2" value="c">
-                            c) Ostrich
-                        </label>
-                    </div>
-                    <div class="question">
-                        <p>3. Which animal is the fastest
+    <!-- نافذة منبثقة لمعلومات الحيوانات -->
+    <div id="animal-info-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="animal-name"></h2>
+            <p id="animal-description"></p>
+        </div>
+    </div>
+
+    <!-- قسم المدونة -->
+    <section id="blog" class="blog-section">
+        <h2>أحدث المقالات</h2>
+        <div class="blog-posts" data-aos="fade-up">
+            <div class="post-card">
+                <h3>أهمية الحفاظ على البيئة الطبيعية للحيوانات</h3>
+                <p>تعرف على أهمية الحفاظ على البيئات الطبيعية للحيوانات البرية لضمان استمرار الحياة البرية.</p>
+                <a href="#">اقرأ المزيد</a>
+            </div>
+            <div class="post-card">
+                <h3>10 حقائق مذهلة عن الأسود</h3>
+                <p>اكتشف بعض الحقائق المذهلة عن الأسود والتي قد تكون لم تعرفها من قبل!</p>
+                <a href="#">اقرأ المزيد</a>
+            </div>
+            <div class="post-card">
+                <h3>كيف تحافظ الحيوانات البرية على توازن البيئة؟</h3>
+                <p>تعرف على الدور الذي تلعبه الحيوانات في الحفاظ على التوازن البيئي في البرية.</p>
+                <a href="#">اقرأ المزيد</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم اتصل بنا -->
+    <section id="contact" class="contact-section">
+        <div class="container" data-aos="fade-up">
+            <h2>اتصل بنا</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">الاسم</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">رسالتك</label>
+                    <textarea id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">إرسال</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 مملكة الحيوانات. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <!-- مكتبة AOS للرسوم المتحركة -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

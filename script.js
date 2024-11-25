@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('nav ul li a');
+    const sections = document.querySelectorAll('section');
 
     for (const link of navLinks) {
         link.addEventListener('click', function(e) {
@@ -14,4 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    // Reveal sections on scroll
+    window.addEventListener('scroll', function() {
+        const scrollPos = window.scrollY + window.innerHeight;
+        for (const section of sections) {
+            if (section.offsetTop < scrollPos - 100) {
+                section.classList.add('visible');
+            }
+        }
+    });
 });

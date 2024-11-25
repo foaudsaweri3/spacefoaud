@@ -1,131 +1,30 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مملكة الحيوانات</title>
+    <title>Ближневосточный барсук</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
-    <!-- مكتبة AOS للرسوم المتحركة -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
-
-    <!-- قائمة التنقل -->
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <h1>مملكة الحيوانات</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#animals">الحيوانات</a></li>
-                <li><a href="#blog">المدونة</a></li>
-                <li><a href="#contact">اتصل بنا</a></li>
-            </ul>
-        </nav>
+        <h1>Ближневосточный барсук</h1>
     </header>
-
-    <!-- قسم المقدمة -->
-    <section id="home" class="hero-section">
-        <div class="hero-content" data-aos="fade-up">
-            <h1>اكتشف عالم الحيوانات</h1>
-            <p>استكشف أروع الحيوانات من جميع أنحاء العالم.</p>
-            <a href="#animals" class="btn">استكشاف الحيوانات</a>
-        </div>
-    </section>
-
-    <!-- قسم الحيوانات -->
-    <section id="animals" class="animal-section">
-        <h2>الحيوانات المميزة</h2>
-        <div class="animal-gallery" data-aos="fade-up">
-            <div class="animal-card" onclick="showAnimalInfo('lion')">
-                <img src="lion.jpg" alt="الأسد">
-                <h3>الأسد</h3>
-                <p>الأسد هو أحد أكبر القطط البرية، ويُعرف بلقب "ملك الغابة".</p>
-            </div>
-            <div class="animal-card" onclick="showAnimalInfo('elephant')">
-                <img src="elephant.jpg" alt="الفيل">
-                <h3>الفيل</h3>
-                <p>الفيل هو أكبر الثدييات البرية، ويتميز بذاكرته القوية وحبه للأسرة.</p>
-            </div>
-            <div class="animal-card" onclick="showAnimalInfo('tiger')">
-                <img src="tiger.jpg" alt="النمر">
-                <h3>النمر</h3>
-                <p>النمر هو قط بري يعيش في الغابات الكثيفة، ويشتهر بقوته وسرعته.</p>
-            </div>
-            <div class="animal-card" onclick="showAnimalInfo('giraffe')">
-                <img src="giraffe.jpg" alt="الزرافة">
-                <h3>الزرافة</h3>
-                <p>الزرافة هي أطول الثدييات على وجه الأرض، وتعيش في السهول الأفريقية.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- نافذة منبثقة لمعلومات الحيوانات -->
-    <div id="animal-info-modal" class="modal hidden">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <h2 id="animal-name"></h2>
-            <p id="animal-description"></p>
-        </div>
-    </div>
-
-    <!-- قسم المدونة -->
-    <section id="blog" class="blog-section">
-        <h2>أحدث المقالات</h2>
-        <div class="blog-posts" data-aos="fade-up">
-            <div class="post-card">
-                <h3>أهمية الحفاظ على البيئة الطبيعية للحيوانات</h3>
-                <p>تعرف على أهمية الحفاظ على البيئات الطبيعية للحيوانات البرية لضمان استمرار الحياة البرية.</p>
-                <a href="#">اقرأ المزيد</a>
-            </div>
-            <div class="post-card">
-                <h3>10 حقائق مذهلة عن الأسود</h3>
-                <p>اكتشف بعض الحقائق المذهلة عن الأسود والتي قد تكون لم تعرفها من قبل!</p>
-                <a href="#">اقرأ المزيد</a>
-            </div>
-            <div class="post-card">
-                <h3>كيف تحافظ الحيوانات البرية على توازن البيئة؟</h3>
-                <p>تعرف على الدور الذي تلعبه الحيوانات في الحفاظ على التوازن البيئي في البرية.</p>
-                <a href="#">اقرأ المزيد</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- قسم اتصل بنا -->
-    <section id="contact" class="contact-section">
-        <div class="container" data-aos="fade-up">
-            <h2>اتصل بنا</h2>
-            <form>
-                <div class="form-group">
-                    <label for="name">الاسم</label>
-                    <input type="text" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">البريد الإلكتروني</label>
-                    <input type="email" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">رسالتك</label>
-                    <textarea id="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn">إرسال</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 مملكة الحيوانات. جميع الحقوق محفوظة.</p>
-    </footer>
-
-    <!-- مكتبة AOS للرسوم المتحركة -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-        });
-    </script>
+    <main>
+        <section>
+            <h2>Описание</h2>
+            <p>Ближневосточный барсук (Meles meles) - это вид млекопитающих семейства барсуковых. Он обитает в лесах и степях Ближнего Востока и Европы.</p>
+            <img src="bar.png" alt="Ближневосточный барсук">
+        </section>
+        <section>
+            <h2>Характеристики</h2>
+            <ul>
+                <li>Длина тела: 60-90 см</li>
+                <li>Вес: 5-10 кг</li>
+                <li>Окраска: коричневая или черная</li>
+            </ul>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

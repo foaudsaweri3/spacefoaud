@@ -1,34 +1,10 @@
-body {
- font-family: Arial, sans-serif;
- margin: 0;
- padding: 0;
-}
-
-header {
- background-color: #333;
- color: #fff;
- padding: 1em;
- text-align: center;
-}
-
-main {
- display: flex;
- flex-direction: column;
- align-items: center;
- padding: 2em;
-}
-
-section {
- background-color: #f7f7f7;
- padding: 1em;
- margin-bottom: 1em;
- box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1, h2 {
- color: #333;
-}
-
-p {
- color: #666;
-}
+// Добавляем событие клика на заголовки, чтобы разворачивать и сворачивать секции
+document.addEventListener('DOMContentLoaded', function() {
+ const headings = document.querySelectorAll('h2');
+ headings.forEach(function(heading) {
+ heading.addEventListener('click', function() {
+ const section = heading.parentNode;
+ section.classList.toggle('expanded');
+ });
+ });
+});

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animal Kingdom</title>
+    <title>Wildlife Wonders</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -11,13 +11,14 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="logo.png" alt="Animal Kingdom Logo">
+                <img src="logo.png" alt="Wildlife Wonders Logo">
             </div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#animals">Animals</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#facts">Facts</a></li>
+                <li><a href="#quiz">Quiz</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -26,9 +27,9 @@
     <main>
         <section id="home">
             <div class="hero">
-                <h1>Welcome to the Animal Kingdom</h1>
-                <p>Discover the incredible diversity of the animal world!</p>
-                <a href="#animals" class="btn">Explore Animals</a>
+                <h1>Welcome to Wildlife Wonders</h1>
+                <p>Embark on a journey through the incredible world of animals!</p>
+                <a href="#animals" class="btn">Discover Animals</a>
             </div>
         </section>
 
@@ -37,90 +38,145 @@
             <div class="animal-grid">
                 <div class="animal">
                     <img src="lion.jpg" alt="Lion">
-                    <h3>Lion</h3>
-                    <p>The lion is a majestic big cat known for its powerful roar and impressive mane.</p>
-                    <a href="#" class="btn">Learn More</a>
+                    <div class="animal-info">
+                        <h3>Lion</h3>
+                        <p>The lion is a majestic big cat known for its powerful roar and impressive mane.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
                 </div>
                 <div class="animal">
                     <img src="elephant.jpg" alt="Elephant">
-                    <h3>Elephant</h3>
-                    <p>Elephants are the largest land mammals and are known for their intelligence and strong social bonds.</p>
-                    <a href="#" class="btn">Learn More</a>
+                    <div class="animal-info">
+                        <h3>Elephant</h3>
+                        <p>Elephants are the largest land mammals and are known for their intelligence and strong social bonds.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
                 </div>
                 <div class="animal">
                     <img src="gorilla.jpg" alt="Gorilla">
-                    <h3>Gorilla</h3>
-                    <p>Gorillas are powerful primates that live in families led by a dominant male silverback.</p>
-                    <a href="#" class="btn">Learn More</a>
+                    <div class="animal-info">
+                        <h3>Gorilla</h3>
+                        <p>Gorillas are powerful primates that live in families led by a dominant male silverback.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
                 </div>
                 <div class="animal">
                     <img src="penguin.jpg" alt="Penguin">
-                    <h3>Penguin</h3>
-                    <p>Penguins are flightless birds adapted to life in the water, found in the Southern Hemisphere.</p>
-                    <a href="#" class="btn">Learn More</a>
+                    <div class="animal-info">
+                        <h3>Penguin</h3>
+                        <p>Penguins are flightless birds adapted to life in the water, found in the Southern Hemisphere.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="gallery">
-            <h2>Animal Gallery</h2>
+            <h2>Wildlife Gallery</h2>
             <div class="gallery-grid">
-                <img src="animal1.jpg" alt="Animal 1">
-                <img src="animal2.jpg" alt="Animal 2">
-                <img src="animal3.jpg" alt="Animal 3">
-                <img src="animal4.jpg" alt="Animal 4">
-                <img src="animal5.jpg" alt="Animal 5">
-                <img src="animal6.jpg" alt="Animal 6">
+                <div class="gallery-item">
+                    <img src="animal1.jpg" alt="Animal 1">
+                    <div class="gallery-overlay">
+                        <h3>Majestic Giraffe</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="animal2.jpg" alt="Animal 2">
+                    <div class="gallery-overlay">
+                        <h3>Playful Dolphins</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="animal3.jpg" alt="Animal 3">
+                    <div class="gallery-overlay">
+                        <h3>Colorful Parrot</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="animal4.jpg" alt="Animal 4">
+                    <div class="gallery-overlay">
+                        <h3>Fierce Tiger</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="animal5.jpg" alt="Animal 5">
+                    <div class="gallery-overlay">
+                        <h3>Graceful Swan</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="animal6.jpg" alt="Animal 6">
+                    <div class="gallery-overlay">
+                        <h3>Curious Meerkat</h3>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="facts">
-            <h2>Animal Facts</h2>
-            <div class="fact">
-                <i class="fas fa-paw"></i>
-                <p>There are over 1.5 million known animal species on Earth.</p>
-            </div>
-            <div class="fact">
-                <i class="fas fa-feather"></i>
-                <p>Birds are the only animals with feathers.</p>
-            </div>
-            <div class="fact">
-                <i class="fas fa-fish"></i>
-                <p>Fish have been on Earth for more than 450 million years.</p>
-            </div>
-            <div class="fact">
-                <i class="fas fa-frog"></i>
-                <p>Some frogs can jump over 20 times their body length.</p>
+            <h2>Fascinating Animal Facts</h2>
+            <div class="fact-container">
+                <div class="fact">
+                    <i class="fas fa-paw"></i>
+                    <p>There are over 1.5 million known animal species on Earth.</p>
+                </div>
+                <div class="fact">
+                    <i class="fas fa-feather"></i>
+                    <p>Birds are the only animals with feathers.</p>
+                </div>
+                <div class="fact">
+                    <i class="fas fa-fish"></i>
+                    <p>Fish have been on Earth for more than 450 million years.</p>
+                </div>
+                <div class="fact">
+                    <i class="fas fa-frog"></i>
+                    <p>Some frogs can jump over 20 times their body length.</p>
+                </div>
+                <div class="fact">
+                    <i class="fas fa-elephant"></i>
+                    <p>African elephants are the largest land animals on Earth.</p>
+                </div>
+                <div class="fact">
+                    <i class="fas fa-dove"></i>
+                    <p>Hummingbirds are the only birds that can fly backwards.</p>
+                </div>
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Send</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <div class="social-media">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
-        <p>&copy; 2023 Animal Kingdom. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        <section id="quiz">
+            <h2>Animal Quiz</h2>
+            <div class="quiz-container">
+                <h3>Test your animal knowledge!</h3>
+                <form id="quiz-form">
+                    <div class="question">
+                        <p>1. Which is the largest land mammal?</p>
+                        <label>
+                            <input type="radio" name="q1" value="a">
+                            a) African Elephant
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="b">
+                            b) Blue Whale
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="c">
+                            c) Giraffe
+                        </label>
+                    </div>
+                    <div class="question">
+                        <p>2. Which bird is known for its ability to mimic human speech?</p>
+                        <label>
+                            <input type="radio" name="q2" value="a">
+                            a) Parrot
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="b">
+                            b) Penguin
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="c">
+                            c) Ostrich
+                        </label>
+                    </div>
+                    <div class="question">
+                        <p>3. Which animal is the fastest

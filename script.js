@@ -1,81 +1,60 @@
-const planetData = {
-    mercury: {
-        name: "Меркурий",
-        image: "https://example.com/mercury.jpg",
-        description: "Ближайшая к Солнцу планета...",
-        diameter: "4,879 км",
-        distance: "57.9 млн км",
-        year: "88 дней"
+// معلومات الحيوانات
+const animalDetails = {
+    lion: {
+        name: 'الأسد',
+        description: 'الأسد هو أحد أكبر القطط البرية، ويُعرف بلقب "ملك الغابة". يعيش في أفريقيا وبعض مناطق الهند.'
     },
+    elephant: {
+        name: 'الفيل',
+        description: 'الفيل هو أكبر الثدييات البرية ويتميز بذاكرته القوية وحبه للأسرة. توجد الأفيال في أفريقيا وآسيا.'
+    },
+    tiger: {
+        name: 'النمر',
+        description: 'النمر هو قط بري يعيش في الغابات الكثيفة، ويشتهر بقوته وسرعته. وهو من الحيوانات المهددة بالانقراض.'
+    },
+    giraffe: {
+        name: 'الزرافة',
+        description: 'الزرافة هي أطول الثدييات على وجه الأرض، وتعيش في السهول الأفريقية. تميزها الرقبة الطويلة التي تصل إلى الأشجار العالية.'
+    }
 };
 
-function createStarfield() {
-    const canvas = document.getElementById('starfield');
-    const ctx = canvas.getContext('2d');
-    
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+// عناصر HTML من الصفحة
+const modal = document.getElementById("animal-info-modal");
+const animalNameElement = document.getElementById("animal-name");
+const animalDescriptionElement = document.getElementById("animal-description");
+const closeModalButton = document.querySelector(".close-btn");
 
-    const stars = [];
-    for (let i = 0; i < 200; i++) {
-        stars.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            radius: Math.random() * 2,
-            speed: Math.random() * 0.5
-        });
-    }
+// إظهار نافذة معلومات الحيوان
+function showAnimalInfo(animalKey) {
+    const animal = animalDetails[animalKey];
+    animalNameElement.textContent = animal.name;
+    animalDescriptionElement.textContent = animal.description;
 
-    function animate() {
-        ctx.fillStyle = 'black';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-        ctx.fillStyle = 'white';
-        stars.forEach(star => {
-            ctx.beginPath();
-            ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-            ctx.fill();
-            
-            star.x -= star.speed;
-            if (star.x < 0) star.x = canvas.width;
-        });
-
-        requestAnimationFrame(animate);
-    }
-
-    animate();
+    modal.classList.remove("hidden");
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    createStarfield();
+// إغلاق النافذة المنبثقة
+function closeModal() {
+    modal.classList.add("hidden");
+}
 
-    const navLinks = document.querySelectorAll('nav ul li a');
-    const planetDetails = document.getElementById('planet-details');
-    const closeButton = document.getElementById('close-details');
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const planetName = link.dataset.planet;
-            showPlanetDetails(planetName);
-        });
-    });
-
-    closeButton.addEventListener('click', () => {
-        planetDetails.classList.add('hidden');
-    });
+// إغلاق النافذة عند الضغط خارج المحتوى
+window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        closeModal();
+    }
 });
 
-function showPlanetDetails(planetName) {
-    const planet = planetData[planetName];
-    
-    document.getElementById('planet-name').textContent = planet.name;
-    document.getElementById('planet-img').src = planet.image;
-    document.getElementById('planet-text').textContent = planet.description;
-    document.getElementById('planet-diameter').textContent = planet.diameter;
-    document.getElementById('planet-distance').textContent = planet.distance;
-    document.getElementById('planet-year').textContent = planet.year;
+// التمرير السلس عند النقر على روابط التنقل
+document.querySelectorAll('.nav-links a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
 
-    const planetDetails = document.getElementById('planet-details');
-    planetDetails.classList.remove('hidden');
-}
+        // التمرير السلس إلى القسم المستهدف
+        targetElement.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});

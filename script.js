@@ -1,15 +1,4 @@
-// Добавляем событие клика на заголовки, чтобы разворачивать и сворачивать секции
-document.addEventListener('DOMContentLoaded', function() {
- const headings = document.querySelectorAll('h2');
- headings.forEach(function(heading) {
- heading.addEventListener('click', function() {
- const section = heading.parentNode;
- section.classList.toggle('expanded');
- });
- });
-});
-
-// Добавляем анимацию к навигации
+// إضافة تأثيرات حركية إلى الشريط التنقل
 document.addEventListener('scroll', function() {
  const nav = document.querySelector('header nav');
  const sections = document.querySelectorAll('main section');
@@ -22,5 +11,18 @@ document.addEventListener('scroll', function() {
  } else {
  nav.querySelector(`a[href="#${section.id}"]`).classList.remove('active');
  }
+ });
+});
+
+// إضافة تأثيرات حركية إلى الأقسام
+document.addEventListener('DOMContentLoaded', function() {
+ const sections = document.querySelectorAll('main section');
+ sections.forEach(function(section) {
+ section.addEventListener('mouseover', function() {
+ section.classList.add('hover');
+ });
+ section.addEventListener('mouseout', function() {
+ section.classList.remove('hover');
+ });
  });
 });
